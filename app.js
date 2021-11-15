@@ -42,31 +42,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Set security HTTP headers
 app.use(helmet({ contentSecurityPolicy: false }));
 
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives: {
-//       defaultSrc: ["'self'", 'data:', 'blob:'],
-
-//       fontSrc: ["'self'", 'https:', 'data:'],
-
-//       scriptSrc: ["'self'", 'unsafe-inline'],
-
-//       scriptSrc: ["'self'", "'unsafe-eval'", 'https://*.cloudflare.com'],
-
-//       scriptSrcElem: ["'self'", 'https:', 'https://*.cloudflare.com'],
-
-//       styleSrc: ["'self'", 'https:', 'unsafe-inline'],
-
-//       connectSrc: [
-//         "'self'",
-//         'data',
-//         'https://*.cloudflare.com',
-//         'ws://127.0.0.1:52522/',
-//       ],
-//     },
-//   })
-// );
-
 // Development logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
