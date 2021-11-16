@@ -36,6 +36,8 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     status: 'success',
     session,
   });
+
+  // res.redirect(303, session.url);
 });
 
 // exports.createBookingCheckout = catchAsync(async (req, res, next) => {
