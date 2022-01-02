@@ -81,7 +81,7 @@ const sendErrorProd = (err, req, res) => {
       // 2.) Send Generic Message
       res.status(err.statusCode).render('error', {
         title: 'Something went wrong!',
-        msg: 'lease try again later',
+        msg: 'Please try again later',
       });
     }
   }
